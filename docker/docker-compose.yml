@@ -1,0 +1,14 @@
+version: "3.7"
+services:
+  nginx:
+    build:
+      context: ./build/nginx
+      args:
+        - HTPASSWD_ARG=$HTPASSWD
+    image: satis-web:$APP_VERSION
+    volumes:
+      - ./build/nginx/nginx.conf:/etc/nginx/nginx.conf
+      - ./build/nginx/conf.d:/etc/nginx/conf.d
+      - ./../data/volumes/satis/build:/usr/share/nginx/html:ro
+    ports:
+      - "9001:80"

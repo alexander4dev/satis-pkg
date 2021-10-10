@@ -1,0 +1,11 @@
+{
+    "name": "stream-games/satis",
+    "homepage": "http://example.com",
+    "repositories": [
+        {
+            "name": "alexander4dev/validation",
+            "type": "git",
+            "url": "https://%repo%/validation.git"
+        }
+    ]
+}
